@@ -1,4 +1,4 @@
-# Famous Paintings Data Analysis
+# Museum and Famous Paintings Data Analysis
 
 ## Overview
 
