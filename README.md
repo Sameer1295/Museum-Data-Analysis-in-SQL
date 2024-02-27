@@ -4,7 +4,7 @@
 
 This project analyzes the Famous Paintings dataset obtained from Kaggle. The dataset contains information about various famous paintings, including details about the artist, subject, year and museums.
 
-![image](https://github.com/Sameer1295/Museum-Data-Analysis-in-SQL/assets/29782669/b58d5db1-579f-404a-804e-b68f7ea3c552)
+![image](https://github.com/Sameer1295/Museum-Data-Analysis-in-SQL/assets/29782669/0880cb26-77d6-4c49-a9a6-806291b6b3d6)
 
 ## Database Schema
 
@@ -22,35 +22,31 @@ The ER diagram represents the structure of the database, detailing the entities 
    - Attributes: size_id, width, height, label
    - Primary Key: size_id
 
-3. **Employee:**
-   - Attributes: emp_id, emp_name, salary
-   - Primary Key: emp_id
-
-4. **Image Link:**
+3. **Image Link:**
    - Attributes: work_id, url, thumbnail_small_url, thumbnail_large_url
    - Primary Key: work_id
    - Foreign Key: work_id references Work(work_id)
 
-5. **Museum:**
+4. **Museum:**
    - Attributes: museum_id, name, address, city, state, postal, country, phone, url
    - Primary Key: museum_id
 
-6. **Museum Hours:**
+5. **Museum Hours:**
    - Attributes: museum_id, day, open, close
    - Primary Key: museum_id
    - Foreign Key: museum_id references Museum(museum_id)
 
-7. **Product Size:**
+6. **Product Size:**
    - Attributes: work_id, size_id, sale_price, regular_price
    - Primary Key: work_id
    - Foreign Key: work_id references Work(work_id)
 
-8. **Subject:**
+7. **Subject:**
    - Attributes: work_id, subject
    - Primary Key: work_id
    - Foreign Key: work_id references Work(work_id)
 
-9. **Work:**
+8. **Work:**
    - Attributes: work_id, name, artist_id, style, museum_id
    - Primary Key: work_id
    - Foreign Keys: artist_id references Artist(artist_id), museum_id references Museum(museum_id)
@@ -74,8 +70,5 @@ The ER diagram represents the structure of the database, detailing the entities 
 
 - **Work - Subject:**
   - One-to-Many relationship: A work can have multiple subjects.
-
-- **Employee - Work:**
-  - One-to-Many relationship: An employee can be associated with multiple works, but each work has one employee.
 
 This ER diagram provides a visual representation of how the different entities in the database are related to each other, aiding in understanding the dataset structure and relationships.
