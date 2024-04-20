@@ -86,8 +86,7 @@ Intersect
 select m.name as museum_name,m.city, m.state,m.country
 from museum_hours mh 
 join museum m on m.museum_id=mh.museum_id
-where day='Monday'
-
+where day='Monday';
 Approach 2:
 select distinct m.name as museum_name, m.city, m.state,m.country
 	from museum_hours mh 
